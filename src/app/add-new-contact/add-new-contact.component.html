@@ -1,0 +1,39 @@
+<mat-card>
+  <mat-card-content>
+<form [formGroup] = "contactForm" (ngSubmit) = "onSubmit()">
+<div>
+  <mat-form-field>
+    <input matInput placeholder="Enter your Name" formControlName="name" required>
+    <mat-error *ngIf="!contactForm.name">Please enter your name</mat-error>
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field>
+    <input matInput placeholder="Enter your phone" formControlName="phone" required>
+    <mat-error *ngIf="!contactForm.phone">please enter your phone</mat-error>
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field>
+    <input matInput placeholder="Enter your email" formControlName="email" >
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field>
+    <input matInput placeholder="Enter your Nickname" formControlName="nickname" >
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field>
+    <input matInput placeholder="Enter your Gender" formControlName ="gender" >
+  </mat-form-field>
+</div>
+<button mat-button color="primary">submit</button>
+</form>
+</mat-card-content>
+</mat-card>
+<div >
+  <button mat-flat-button color="primary" routerLink="/contacts">Back to ContactList</button>
+  </div>
+
+
